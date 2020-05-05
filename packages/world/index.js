@@ -1,0 +1,10 @@
+require('./blips.js');
+require('./markers.js');
+require('./other.js');
+require('./suicide.js');
+require('./world.js');
+require('./colpshapes.js');
+require('./notifys.js');
+require('./module/index.js');
+require('./Alert/sAlert');
+require('./rStreamColshapes');

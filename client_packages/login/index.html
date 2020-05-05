@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+        <script src="assets/js/jquery-3.2.1.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                        <body style="color:red">
+                    <h1 class="text-center"><font color="dodgerblue">Array RolePlay</font>
+                       </h1>
+                        </body>
+                    <br>
+                    <div class="alert alert-danger incorrect-info" role="alert">
+                        <i class="fas fa-exclamation-circle"></i> Ошибка: Неправильный пароль или логин.
+                    </div>
+                    <div class="alert alert-danger logged" role="alert">
+                        <i class="fas fa-exclamation-circle"></i> Ошибка: Данный пользователь уже онлайн.
+                    </div>
+                    <div class="alert alert-danger taken-info" role="alert">
+                        <i class="fas fa-exclamation-circle"></i> Ошибка: Данный ник занят.
+                    </div>
+                    <div class="alert alert-danger short-info" role="alert">
+                        <i class="fas fa-exclamation-circle"></i> Ошибка: пароль или логин слишком короткий.
+                    </div>
+                    <div class="alert alert-danger password-mismatch" role="alert">
+                        <i class="fas fa-exclamation-circle"></i> Ошибка: Пароль не совпадает
+                    </div>
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab">Аккаунт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab">Регистрация</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="loginName" placeholder="Имя Фамилия">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" id="loginPass" placeholder="Пароль">
+                            </div>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="loginBtn" onclick="sendAccountInfo(0);">Войти</button>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="registerName" placeholder="Имя Фамилия">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" id="registerPass" placeholder="Пароль">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" id="registerPass2" placeholder="Повторите пароль">
+                            </div>
+                            <button type="button" class="btn btn-success btn-lg btn-block" id="registerBtn" onclick="sendAccountInfo(1);">Регистрация</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+            $('.alert-danger').hide();
+        </script>
+    </body>
+</html>
